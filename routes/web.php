@@ -21,8 +21,9 @@ Route::get('/', function () {
 })->name("acceuil");
 
 Route::get('/Agents', [AgentController::class, "index"])->name("agents"); //ce qui est à la fin nde la route 
-//Route::get('/Agents', [AgentController::class, "index"])->name("agents");
+
 Route::get('/Agents/create', [AgentController::class, "create"])->name("agents.create");
+
 Route::get('/Historique', [HistoriqueController::class, "index"])->name("historique");
 
 Route::post('/Agents/create', [AgentController::class, "store"])->name("agents.ajouter"); // on spécifie post pour dire que nous allons envoyer les données et la fonction s'appel store 
@@ -30,5 +31,5 @@ Route::post('/Agents/create', [AgentController::class, "store"])->name("agents.a
 Route::get('/Agents/{agents}', [AgentController::class, "edit"])->name("agents.edit"); // on spécifie post pour dire que nous allons envoyer les données et la fonction s'appel store 
 
 Route::delete('/Agents/{agents}', [AgentController::class, "delete"])->name("agents.supprimer"); // on spécifie le paramettre pour le formulaire, on spécifie la méthode delete que nous allons
-//appelé à la suite et on spécifie encore la route
+
 Route::put('/Agents/{agents}', [AgentController::class, "update"])->name("agents.update");// on spécifie le paramettre pour le formulaire, on spécifie la méthode delete que nous allons
